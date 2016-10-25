@@ -67,13 +67,23 @@ var pizza4 = Object.create(pizza);
  *  5. Build a Animal object by using object constructor function, and add at least two method to prototype,
  *     create two animals from it.
  */
-function Animal() {
-    this.prototype = function() {
-        var walk = function(){
-            return 'walking';
-        }
-    }
+function Animal(name, species, sound) {
+    this.name = name;
+    this.species = species;
+    this.sound = sound;
 }
+
+Animal.prototype.view = function(){
+    return this.name + " is a " + this.species + "!";
+}
+
+Animal.prototype.speak = function(){
+    return this.sound + "!";
+}
+
+dog = new Animal('charlie', 'dog', 'bark');
+console.log(dog.view());
+console.log(dog.speak());
 
 /*
  * 6. Write a small menu selection function by using if-else and switch, input number, output name of your order
