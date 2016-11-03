@@ -46,11 +46,11 @@
  *        input2 = 'today is Sunday';
  *        output2 = 'Today is Sunday';
  */
-function firstChar(word){
+function firstChar(word) {
     return word.charAt(0).toUpperCase() + word.substr(1).toLowerCase();
 }
 
-function capitalize(str){
+function capitalize(str) {
     var words = str.split(' ');
     words = words.map(firstChar);
     return words.join(' ');
@@ -76,7 +76,7 @@ var emailregex_str =  "^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@
 emailregex = new RegExp (emailregex_str, 'i');
 
 console.log(emailregex_str)
-console.log( "gbekeloluwa.olufotebi@meltwater.org".match(emailregex) );
+console.log("gbekeloluwa.olufotebi@meltwater.org".match(emailregex));
 /*
  * 4. what is localStorage and sessionStorge under window object? What is the
  *    difference
